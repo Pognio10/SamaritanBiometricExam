@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <android.support.constraint.ConstraintLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	app:layout_behavior="@string/appbar_scrolling_view_behavior"
+	tools:context=".PersonActivity"
+	tools:showIn="@layout/activity_person">
+
+	 <ProgressBar
+		 android:id="@+id/progressBarPerson"
+		 style="?android:attr/progressBarStyleHorizontal"
+		 android:layout_width="match_parent"
+		 android:layout_height="wrap_content" android:indeterminate="true"
+		 android:visibility="invisible"/>
+	<LinearLayout
+		android:id="@+id/linearLayoutMain"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		android:weightSum="1"
+		tools:context=".PersonActivity"
+		tools:layout_editor_absoluteX="0dp"
+		tools:layout_editor_absoluteY="0dp">
+
+		<LinearLayout android:layout_width="match_parent"
+					  android:layout_height="wrap_content"
+					  android:layout_margin="10dp"
+					  android:orientation="horizontal"
+					  android:weightSum="1">
+
+			<TextView android:layout_width="wrap_content"
+					  android:layout_height="wrap_content"
+					  android:layout_weight="0.4"
+					  android:text="Name"/>
+			<EditText
+				android:id="@+id/nameEditText"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_weight="0.4"
+				android:ems="10"
+				android:hint="Add the person name"
+				android:inputType="textPersonName"/>
+
+		</LinearLayout>
+
+		<GridView
+			android:id="@+id/gridView1"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+			android:layout_marginStart="10dp"
+			android:layout_marginTop="10dp"
+			android:columnWidth="100dp"
+			android:gravity="center"
+			android:numColumns="auto_fit"
+			android:stretchMode="columnWidth">
+		</GridView>
+
+	</LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
+
