@@ -1,5 +1,5 @@
 # SAMARITAN
-- installare il file .apk su un dispositivo android (è ottimizzato solo per gli smartphone), puoi scaricare il file apk da [qui](/apk/app-release.apk).
+- Installare il file .apk su un dispositivo android (è ottimizzato solo per gli smartphone), puoi scaricare il file apk da [qui](/apk/app-release.apk).
 
 - Dopo aver installato l'applicazione bisogno concedergli i permessi di superuser, Impostazioni -> Applicazioni -> Accesso Speciale -> Ammistratore Dispositivo.
 
@@ -9,11 +9,11 @@
 
 - Una volta salvato le foto l'applicazione effettuerà il training dell'intero gruppo #### Whitelist
 
-- Quando tutto è stato configurato il sistema potrà essere avviato, l'applicazione ogni 15 secondi scatterà una foto dalla fotocamera frontale e la manderà al sevizio [azure](https://docs.microsoft.com/it-it/azure/cognitive-services/face/overview) per l'identificazione, il servizio ritornerà UUID della persona che riconosce con una confidance di assomiglianza.
+- Quando tutto è stato configurato il sistema potrà essere avviato,(basterà cliccare sul pulsante Active) l'applicazione ogni 15 secondi scatterà una foto dalla fotocamera frontale e la manderà al sevizio [azure](https://docs.microsoft.com/it-it/azure/cognitive-services/face/overview) per l'identificazione, il servizio ritornerà UUID della persona che riconosce con una confidance di assomiglianza.
 
 -  Se il dispositivo quando riceve UUID della persona non la riconosce allora bloccherà il dispositivo.
 
-- Per disattivare il servizio bisogna rientrare e bloccare spegnerlo.
+- Per disattivare il servizio bisogna riaprire l'applicazione e cliccare sul pulsante "Deactive"
 
 
 
