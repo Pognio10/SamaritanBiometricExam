@@ -1,5 +1,5 @@
 # SAMARITAN
-- installare il file .apk su un dispositivo android (è ottimizzato solo per gli smartphone), puoi scaricare il file apk da [qui](/apk/sample.apk).
+- installare il file .apk su un dispositivo android (è ottimizzato solo per gli smartphone), puoi scaricare il file apk da [qui](/apk/app-release.apk).
 
 - Dopo aver installato l'applicazione bisogno concedergli i permessi di superuser, Impostazioni -> Applicazioni -> Accesso Speciale -> Ammistratore Dispositivo.
 
