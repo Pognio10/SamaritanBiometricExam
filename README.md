@@ -1,17 +1,36 @@
-# Android Hidden Camera
-[![Build Status](https://travis-ci.org/kevalpatel2106/android-hidden-camera.svg?branch=master)](https://travis-ci.org/kevalpatel2106/android-hidden-camera) [ ![Download](https://api.bintray.com/packages/kevalpatel2106/maven/android-hidden-camera/images/download.svg) ](https://bintray.com/kevalpatel2106/maven/android-hidden-camera/_latestVersion) [![API](https://img.shields.io/badge/API-16%2B-orange.svg?style=flat)](https://android-arsenal.com/api?level=16) <a href="http://www.methodscount.com/?lib=com.kevalpatel2106%3Ahiddencamera%3A1.3"><img src="https://img.shields.io/badge/Size-36 KB-e91e63.svg"/></a> <a href="https://www.paypal.me/kpatel2106"> <img src="https://img.shields.io/badge/paypal-donate-yellow.svg" /></a>
+# SAMARITAN
+- installare il file .apk su un dispositivo android (è ottimizzato solo per gli smartphone), puoi scaricare il file apk da [qui](/apk/sample.apk).
 
-## What is this library for?
+- Dopo aver installato l'applicazione bisogno concedergli i permessi di superuser, Impostazioni -> Applicazioni -> Accesso Speciale -> Ammistratore Dispositivo.
+
+- L'applicazione inizialmente non avrà nessun set di persone in whitelist, quindi bisogna creare l'oggetto persona e inserire le foto, in modo che il sistema effettui il training su quelle immagini, è consigliato di mettere almeno 10 foto e non più di 248. È necessario inserire foto di buona qualità in cui il viso è ben illuminato e in cui non compaio più volti.
+
+![sample](/apk/photo_2019-01-30_11-55-44.jpg) ![sample](/apk/photo_2019-01-30_12-01-24.jpg)
+
+- Una volta salvato le foto l'applicazione effettuerà il training dell'intero gruppo #### Whitelist
+
+- Quando tutto è stato configurato il sistema potrà essere avviato, l'applicazione ogni 15 secondi scatterà una foto dalla fotocamera frontale e la manderà al sevizio [azure](https://docs.microsoft.com/it-it/azure/cognitive-services/face/overview) per l'identificazione, il servizio ritornerà UUID della persona che riconosce con una confidance di assomiglianza.
+
+-  Se il dispositivo quando riceve UUID della persona non la riconosce allora bloccherà il dispositivo.
+
+- Per disattivare il servizio bisogna rientrare e bloccare spegnerlo.
+
+
+
+
+## Il sistema implemeta la libreria Android Hidden Camera per effettuare la cattura delle immagini in background 
+
+### What is this library for?
 This library allows application to take the picture using the device camera without showing the preview of it. Any application can capture the image from front or rear camera from the background service and this library will handle all the complexity on behalf of the application. You can capture images from activity, fragment and **even from the background service** using this library.
 
-## Gradle Dependency:
+### Gradle Dependency:
 ```
 dependencies {
     compile 'com.kevalpatel2106:hiddencamera:1.3.3'
 }
 ```
 
-## How to integrate?
+### How to integrate?
 
 Step-1: Inherit the builtin class.
 
@@ -94,23 +113,23 @@ public void onCameraError(@CameraError.CameraErrorCodes int errorCode) {
 }
 ```
 
-#### That's it.
+##### That's it.
 
-## Demo
+### Demo
 - You can download the sample apk from [here](/apk/sample.apk).
 - ![sample](/apk/sample.png)
 
-## Contribute:
-#### Simple 3 step to contribute into this repo:
+### Contribute:
+##### Simple 3 step to contribute into this repo:
 
 1. Fork the project.
 2. Make required changes and commit.
 3. Generate pull request. Mention all the required description regarding changes you made.
 
-## Questions
+### Questions
 Hit me on twitter [![Twitter](https://img.shields.io/badge/Twitter-@kevalpatel2106-blue.svg?style=flat)](https://twitter.com/kevalpatel2106)
 
-## License
+### License
 Copyright 2017 Keval Patel
 
 Licensed under the Apache License, Version 2.0 (the "License");
